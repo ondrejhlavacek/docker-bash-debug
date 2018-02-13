@@ -7,6 +7,6 @@ RUN yum -y install wget vim
 RUN yum -y install mod_php70u php70-develu php70u-cli php70u-mysqlnd httpd
 RUN yum -y install mod_ssl openssl
 RUN yum -y install php70u-json
-COPY ./generate-certificate.sh /root/generate-certificate.sh
+COPY ./docker/generate-certificate.sh /root/generate-certificate.sh
 RUN chmod +x /root/generate-certificate.sh
 RUN /root/generate-certificate.sh
